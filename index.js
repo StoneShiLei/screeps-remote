@@ -6,11 +6,14 @@ module.exports = (config = {}) => {
   config = Object.assign({
     username: process.env.SCREEPS_USERNAME,
     password: process.env.SCREEPS_PASSWORD,
+    server_url:process.env.SCREEPS_SERVERURL,
     branch: process.env.SCREEPS_BRANCH || 'default',
     ptr: process.env.SCREEPS_PTR || false,
     src: process.env.SCREEPS_SOURCE || process.cwd()
   }, config)
 
+  console.log(config.server_url)
+  debugger
   const dashboard = new Dashboard()
   const screeps = new Screeps(config)
   const modules = new ModuleManager(config)

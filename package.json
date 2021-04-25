@@ -39,5 +39,8 @@
     "lodash": "^4.15.0",
     "request": "^2.74.0",
     "sockjs-client": "^1.1.1"
+  },
+  "scripts": {
+    "remote": "node remote.js"
   }
 }
